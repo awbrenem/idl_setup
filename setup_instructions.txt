@@ -1,0 +1,25 @@
+Installing all the necessary tools to use IDL software for the UMinn space physics group.
+
+
+
+TDAS (aka SPEDAS, aka spdsw)    http://themis.ssl.berkeley.edu/socware/bleeding_edge/
+The “bleeding edge” is the nightly build, and is the most up to date version. You may only need to update
+every year or so, so you’ll be fine with the most recent one (“spdsw_latest.zip”) for quite a while.
+The tricky part with this one is going to be getting IDL to know where these programs are located. On Macs I
+do this by modifying my .bash_profile file. But, that’s for UNIX. You may want to ask Jackson how to do this
+on a Windows machine.
+
+
+NASA’s CDF library. https://spdf.sci.gsfc.nasa.gov/pub/software/cdf/dist/cdf36_4/
+In the “idl” or “idl86” folder (depending on which IDL version you have) grab the idl_cdf.dlm file. This file is OS-independent.
+There’s also an OS-dependent file called idl_cdf.dll. It’s in the idl86/windows/?? folder.
+The documentation should explain where to place these files. That’s all you need to do here.
+
+NAIF SPICE library. Used for calculating satellite trajectories. https://naif.jpl.nasa.gov/naif/toolkit.html
+You’ll almost certainly want the 64 bit Windows version. This is also an easy install and the README file is
+helpful. There are a bunch of files in the downloaded zip folder, but, like the CDF library, I think you only need the
+icy.dlm and icy.dll files. I recall that they go in the same folder as the CDF library ones.
+
+IDL GEOPACK   http://ampere.jhuapl.edu/code/idl_geopack.html   (brace yourself for an awesome retro website!)
+Download version 9.4 for Windows. Again, we need the .dlm and .dll files (idl_geopack.dlm and idl_geopack.dll)
+and I think you place them in the same location as before.
