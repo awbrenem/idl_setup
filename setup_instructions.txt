@@ -23,3 +23,20 @@ icy.dlm and icy.dll files. I recall that they go in the same folder as the CDF l
 IDL GEOPACK   http://ampere.jhuapl.edu/code/idl_geopack.html   (brace yourself for an awesome retro website!)
 Download version 9.4 for Windows. Again, we need the .dlm and .dll files (idl_geopack.dlm and idl_geopack.dll)
 and I think you place them in the same location as before.
+
+
+
+Finally, modify the .bash_profile to start IDL so it recognizes the TDAS routines. 
+On my computer I create a function call in my .bash_profile with this code:
+
+
+# Set up TDAS for the RBSP bleeding edge software
+function rbsp {
+    unset IDL_PATH
+    # export TDAS_UMN=$HOME/Desktop/code/themis_idl
+    export TDAS_UMN=$HOME/Desktop/code/Aaron/RBSP/TDAS_trunk_svn
+    export CDF_LEAPSECONDSTABLE=/Applications/exelis/idl84/bin/CDFLeapSeconds.txt
+    export IDL_PATH=':+$HOME/Desktop/code/Aaron/rbsp/:+/Applications/exelis/idl84/lib:+/Applications/exelis/idl84/examples/doc/utiliti$
+    idl
+}
+
